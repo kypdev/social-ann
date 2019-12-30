@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:social_app/media_page.dart';
-import 'package:social_app/notification_page.dart';
-import 'package:social_app/profile_page.dart';
+import 'package:social_app/help_page.dart';
 
+import 'chat_page.dart';
 import 'feed_page.dart';
 import 'first_page.dart';
 
@@ -15,18 +14,15 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _selectedItem = 0;
   final _pageOption = [
-
     FirstPage(),
-    ProfilePage(),
+    ChatPage(),
     FeedPage(),
-    MediaPage(),
-    NotificationPage(),
+    HelpPage(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: _pageOption[_selectedItem],
       bottomNavigationBar: BottomNavigationBar(
         elevation: 5.0,
@@ -54,7 +50,6 @@ class _HomePageState extends State<HomePage> {
             icon: Icon(Icons.help),
             title: Text('ช่วยเหลือ'),
           ),
-
         ],
       ),
     );
@@ -96,7 +91,6 @@ class _HomePageState extends State<HomePage> {
 //      ],
 //    ),
 //  ) ;
-
 
 //    Container(
 //    padding: EdgeInsets.only(top: 30.0, left: 20.0, right: 20.0),
